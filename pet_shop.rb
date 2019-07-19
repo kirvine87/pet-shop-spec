@@ -30,5 +30,14 @@ def pets_by_breed(shop, breed)
       breed_array.push(type)
     end
   end
-  return breed_array 
+  return breed_array
+end
+
+def find_pet_by_name(shop, name)
+  types = shop[:pets]
+  for type in types
+    if type[:name] == name
+      return type
+    end
+  end
 end
